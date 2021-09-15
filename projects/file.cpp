@@ -7,7 +7,7 @@
   Last modified: 9/14/2021
 */
 
-#Include <iostream>
+#include <iostream>
 
 using  namespace std;
 
@@ -18,13 +18,14 @@ int main() {
     int count = 0;//Intialize the count to keep track of guesses
     bool gotItRight = false; //Boolean to keep track of if player is in a round
     srand (time(NULL));  
-    ranNum = rand() % 100; //Assgin random number to ranNum  
+    ranNum = rand() % 100; //Assgin random number to ranNum
+    cout << "Take a guess (0-100)" << endl;
     while(!gotItRight){//If the player has not got it right
         int guess;
         cin >> guess;//Assgin user input to guess
         count++;//Add one to number of guesses
         if(guess == ranNum){//Case when player guesses right
-         cout << "You got it right. It took you "<< count <<" tries. Would you like to  play again?(y/n)" << endl;
+	  cout << "You got it right. It took you "<< count <<" tries. Would you like to  play again?(y/n)" << endl;
 	 gotItRight = true;//to get out of a round a reset to first loop
         }
 	//If guess is incorrect tell user what went wrong and repeat the guess loop
