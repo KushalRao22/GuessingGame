@@ -4,7 +4,7 @@
 
   By: Kushal Rao
 
-  Last modified: 9/14/2021
+  Last modified: 9/15/2021
 */
 
 #Include <iostream>
@@ -18,9 +18,10 @@ int main() {
     int count = 0;//Intialize the count to keep track of guesses
     bool gotItRight = false; //Boolean to keep track of if player is in a round
     srand (time(NULL));  
-    ranNum = rand() % 100; //Assgin random number to ranNum  
+    ranNum = rand() % 100; //Assgin random number to ranNum
     while(!gotItRight){//If the player has not got it right
         int guess;
+	cout << "Guess a number (0-100)" << endl;
         cin >> guess;//Assgin user input to guess
         count++;//Add one to number of guesses
         if(guess == ranNum){//Case when player guesses right
